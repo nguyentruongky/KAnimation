@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26C431D61C2403FE00AE7BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C431D51C2403FE00AE7BC7 /* AppDelegate.swift */; };
+		26C431DB1C2403FE00AE7BC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26C431D91C2403FE00AE7BC7 /* Main.storyboard */; };
+		26C431DD1C2403FE00AE7BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C431DC1C2403FE00AE7BC7 /* Assets.xcassets */; };
+		26C431E01C2403FE00AE7BC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26C431DE1C2403FE00AE7BC7 /* LaunchScreen.storyboard */; };
+		26C431E91C2406F400AE7BC7 /* kTransitionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C431E81C2406F400AE7BC7 /* kTransitionTableViewController.swift */; };
+		26C431F31C240D3F00AE7BC7 /* kDropDownTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C431F21C240D3F00AE7BC7 /* kDropDownTransition.swift */; };
+		26C431F61C247F3A00AE7BC7 /* kZoomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C431F51C247F3A00AE7BC7 /* kZoomTransition.swift */; };
+		26C431F81C24804B00AE7BC7 /* kDropDownDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C431F71C24804B00AE7BC7 /* kDropDownDestinationViewController.swift */; };
+		26C431FA1C24811D00AE7BC7 /* kAnimationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C431F91C24811D00AE7BC7 /* kAnimationBase.swift */; };
+		26C431FC1C2482A500AE7BC7 /* kBox3DTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C431FB1C2482A500AE7BC7 /* kBox3DTransition.swift */; };
+		26C432041C2854E600AE7BC7 /* kPopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C432031C2854E600AE7BC7 /* kPopTransition.swift */; };
+		26C4322C1C290D3800AE7BC7 /* kCircleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C4322B1C290D3800AE7BC7 /* kCircleTransition.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		26C431D21C2403FE00AE7BC7 /* KAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26C431D51C2403FE00AE7BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		26C431DA1C2403FE00AE7BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		26C431DC1C2403FE00AE7BC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26C431DF1C2403FE00AE7BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		26C431E11C2403FE00AE7BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26C431E81C2406F400AE7BC7 /* kTransitionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kTransitionTableViewController.swift; sourceTree = "<group>"; };
+		26C431F21C240D3F00AE7BC7 /* kDropDownTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kDropDownTransition.swift; sourceTree = "<group>"; };
+		26C431F51C247F3A00AE7BC7 /* kZoomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kZoomTransition.swift; sourceTree = "<group>"; };
+		26C431F71C24804B00AE7BC7 /* kDropDownDestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kDropDownDestinationViewController.swift; sourceTree = "<group>"; };
+		26C431F91C24811D00AE7BC7 /* kAnimationBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kAnimationBase.swift; sourceTree = "<group>"; };
+		26C431FB1C2482A500AE7BC7 /* kBox3DTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kBox3DTransition.swift; sourceTree = "<group>"; };
+		26C432031C2854E600AE7BC7 /* kPopTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kPopTransition.swift; sourceTree = "<group>"; };
+		26C4322B1C290D3800AE7BC7 /* kCircleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kCircleTransition.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26C431CF1C2403FE00AE7BC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26C431C91C2403FE00AE7BC7 = {
+			isa = PBXGroup;
+			children = (
+				26C431D41C2403FE00AE7BC7 /* KAnimation */,
+				26C431D31C2403FE00AE7BC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26C431D31C2403FE00AE7BC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26C431D21C2403FE00AE7BC7 /* KAnimation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26C431D41C2403FE00AE7BC7 /* KAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				26C431D91C2403FE00AE7BC7 /* Main.storyboard */,
+				26C431E81C2406F400AE7BC7 /* kTransitionTableViewController.swift */,
+				26C431F41C240D4600AE7BC7 /* kTransitionController */,
+				26C431E71C24041000AE7BC7 /* Supported */,
+				26C431F71C24804B00AE7BC7 /* kDropDownDestinationViewController.swift */,
+			);
+			path = KAnimation;
+			sourceTree = "<group>";
+		};
+		26C431E71C24041000AE7BC7 /* Supported */ = {
+			isa = PBXGroup;
+			children = (
+				26C431D51C2403FE00AE7BC7 /* AppDelegate.swift */,
+				26C431DC1C2403FE00AE7BC7 /* Assets.xcassets */,
+				26C431DE1C2403FE00AE7BC7 /* LaunchScreen.storyboard */,
+				26C431E11C2403FE00AE7BC7 /* Info.plist */,
+			);
+			name = Supported;
+			sourceTree = "<group>";
+		};
+		26C431F41C240D4600AE7BC7 /* kTransitionController */ = {
+			isa = PBXGroup;
+			children = (
+				26C431F91C24811D00AE7BC7 /* kAnimationBase.swift */,
+				26C431FB1C2482A500AE7BC7 /* kBox3DTransition.swift */,
+				26C4322B1C290D3800AE7BC7 /* kCircleTransition.swift */,
+				26C431F21C240D3F00AE7BC7 /* kDropDownTransition.swift */,
+				26C432031C2854E600AE7BC7 /* kPopTransition.swift */,
+				26C431F51C247F3A00AE7BC7 /* kZoomTransition.swift */,
+			);
+			name = kTransitionController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26C431D11C2403FE00AE7BC7 /* KAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26C431E41C2403FE00AE7BC7 /* Build configuration list for PBXNativeTarget "KAnimation" */;
+			buildPhases = (
+				26C431CE1C2403FE00AE7BC7 /* Sources */,
+				26C431CF1C2403FE00AE7BC7 /* Frameworks */,
+				26C431D01C2403FE00AE7BC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KAnimation;
+			productName = KAnimation;
+			productReference = 26C431D21C2403FE00AE7BC7 /* KAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26C431CA1C2403FE00AE7BC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Ky Nguyen";
+				TargetAttributes = {
+					26C431D11C2403FE00AE7BC7 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 26C431CD1C2403FE00AE7BC7 /* Build configuration list for PBXProject "KAnimation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26C431C91C2403FE00AE7BC7;
+			productRefGroup = 26C431D31C2403FE00AE7BC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26C431D11C2403FE00AE7BC7 /* KAnimation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26C431D01C2403FE00AE7BC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26C431E01C2403FE00AE7BC7 /* LaunchScreen.storyboard in Resources */,
+				26C431DD1C2403FE00AE7BC7 /* Assets.xcassets in Resources */,
+				26C431DB1C2403FE00AE7BC7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26C431CE1C2403FE00AE7BC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26C431F31C240D3F00AE7BC7 /* kDropDownTransition.swift in Sources */,
+				26C431F61C247F3A00AE7BC7 /* kZoomTransition.swift in Sources */,
+				26C431F81C24804B00AE7BC7 /* kDropDownDestinationViewController.swift in Sources */,
+				26C4322C1C290D3800AE7BC7 /* kCircleTransition.swift in Sources */,
+				26C431E91C2406F400AE7BC7 /* kTransitionTableViewController.swift in Sources */,
+				26C431FA1C24811D00AE7BC7 /* kAnimationBase.swift in Sources */,
+				26C431FC1C2482A500AE7BC7 /* kBox3DTransition.swift in Sources */,
+				26C432041C2854E600AE7BC7 /* kPopTransition.swift in Sources */,
+				26C431D61C2403FE00AE7BC7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		26C431D91C2403FE00AE7BC7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26C431DA1C2403FE00AE7BC7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		26C431DE1C2403FE00AE7BC7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26C431DF1C2403FE00AE7BC7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26C431E21C2403FE00AE7BC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		26C431E31C2403FE00AE7BC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26C431E51C2403FE00AE7BC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = phuot.KAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		26C431E61C2403FE00AE7BC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = phuot.KAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26C431CD1C2403FE00AE7BC7 /* Build configuration list for PBXProject "KAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26C431E21C2403FE00AE7BC7 /* Debug */,
+				26C431E31C2403FE00AE7BC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26C431E41C2403FE00AE7BC7 /* Build configuration list for PBXNativeTarget "KAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26C431E51C2403FE00AE7BC7 /* Debug */,
+				26C431E61C2403FE00AE7BC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26C431CA1C2403FE00AE7BC7 /* Project object */;
+}
