@@ -14,6 +14,7 @@ enum kTransitionEnum {
     case kDropTransition
     case kPopTransition
     case kCircleTransition
+    case kSlidingTransition
     case Default
 }
 
@@ -69,6 +70,9 @@ class kTransitionTableViewController: UITableViewController, UIViewControllerTra
         case 3:
             currentTransition = kTransitionEnum.kCircleTransition
             
+        case 4:
+            currentTransition = kTransitionEnum.kSlidingTransition
+            
         default:
             currentTransition = kTransitionEnum.Default
         }
@@ -99,6 +103,8 @@ class kTransitionTableViewController: UITableViewController, UIViewControllerTra
         case .kCircleTransition:
             return kCircleTransition(startFrame: CGRectMake(300, 100, 100, 100))
             
+        case .kSlidingTransition:
+            return kSlidingTransition()
         default:
             return nil
         }
