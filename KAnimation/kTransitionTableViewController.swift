@@ -13,44 +13,25 @@ enum kTransitionEnum {
     case kBox3DTransition
     case kDropTransition
     case kPopTransition
+    case kCircleTransition
     case Default
 }
 
 class kTransitionTableViewController: UITableViewController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
 
-    var currentTransition = kTransitionEnum.Default
+    var currentTransition: kTransitionEnum!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.delegate = self
     }
-
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        switch indexPath.row {
-            
-        case 0:
-            currentTransition = kTransitionEnum.kBox3DTransition
-            
-        case 1:
-            currentTransition = kTransitionEnum.kDropTransition
-            
-        case 2:
-            currentTransition = kTransitionEnum.kPopTransition
-            
-        default:
-            currentTransition = kTransitionEnum.Default
-        }
-    }
     
     // MARK: - Navigation
 
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
-        return kCircleTransition(startFrame: CGRectMake(100, 300, 100, 100))
-        
-//        return kBox3DTransition()
+    
+        return kBox3DTransition()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -85,6 +66,9 @@ class kTransitionTableViewController: UITableViewController, UIViewControllerTra
         case 2:
             currentTransition = kTransitionEnum.kPopTransition
             
+        case 3:
+            currentTransition = kTransitionEnum.kCircleTransition
+            
         default:
             currentTransition = kTransitionEnum.Default
         }
@@ -92,7 +76,7 @@ class kTransitionTableViewController: UITableViewController, UIViewControllerTra
 
     func selectTransition() -> UIViewControllerAnimatedTransitioning? {
         
-        switch currentTransition {
+        switch currentTransition! {
             
         case kTransitionEnum.kBox3DTransition:
             return kBox3DTransition()
@@ -111,6 +95,9 @@ class kTransitionTableViewController: UITableViewController, UIViewControllerTra
             
         // pop from default position
             return kPopTransition()
+            
+        case .kCircleTransition:
+            return kCircleTransition(startFrame: CGRectMake(300, 100, 100, 100))
             
         default:
             return nil

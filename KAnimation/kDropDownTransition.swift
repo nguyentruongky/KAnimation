@@ -8,17 +8,11 @@
 
 import UIKit
 
-class kDropDownTransition: kAnimationBase, UIViewControllerAnimatedTransitioning {
-    
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+class kDropDownTransition: kAnimationBase {
+      
+    override func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         
-        return duration
-    }
-    
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        
-        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
-        let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+        prepareElements(transitionContext)
         let finalFrameForVC = transitionContext.finalFrameForViewController(toViewController)
         let containerView = transitionContext.containerView()
         let bounds = UIScreen.mainScreen().bounds
@@ -27,13 +21,13 @@ class kDropDownTransition: kAnimationBase, UIViewControllerAnimatedTransitioning
         
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
             
-            fromViewController.view.alpha = 0.5
-            toViewController.view.frame = finalFrameForVC
+            self.fromViewController.view.alpha = 0.5
+            self.toViewController.view.frame = finalFrameForVC
             }) {
                 
                 finished in
                 transitionContext.completeTransition(true)
-                fromViewController.view.alpha = 1.0
+                self.fromViewController.view.alpha = 1.0
         }
     }
 

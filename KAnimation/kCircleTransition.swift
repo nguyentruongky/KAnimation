@@ -8,7 +8,7 @@
 
 import UIKit
 
-class kCircleTransition: NSObject, UIViewControllerAnimatedTransitioning {
+class kCircleTransition: kAnimationBase {
 
     weak var transitionContext: UIViewControllerContextTransitioning?
     var originalFrame: CGRect?
@@ -18,19 +18,18 @@ class kCircleTransition: NSObject, UIViewControllerAnimatedTransitioning {
         originalFrame = startFrame
     }
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    override func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         
         return 0.5
     }
     
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    override func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         
         self.transitionContext = transitionContext
 
-        let containerView = transitionContext.containerView()
-        let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+        prepareElements(transitionContext)
         
-        containerView?.addSubview(toViewController!.view)
+        containerView.addSubview(toViewController!.view)
         
         let circleMaskPathInitial = UIBezierPath(ovalInRect: originalFrame!)
 
@@ -43,7 +42,6 @@ class kCircleTransition: NSObject, UIViewControllerAnimatedTransitioning {
         let maskLayer = CAShapeLayer()
         maskLayer.path = circleMaskPathFinal.CGPath
         toViewController!.view.layer.mask = maskLayer
-        
 
         let maskLayerAnimation = CABasicAnimation(keyPath: "path")
         maskLayerAnimation.fromValue = circleMaskPathInitial.CGPath

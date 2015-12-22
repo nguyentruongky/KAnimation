@@ -8,18 +8,12 @@
 
 import UIKit
 
-class kPopTransition: NSObject, UIViewControllerAnimatedTransitioning {
+class kPopTransition: kAnimationBase {
 
-    let duration    = 1.0
     var presenting  = true
     var originFrame = CGRect.zero
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        
-        return duration
-    }
-    
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    override func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         
         if originFrame == CGRect.zero {
         

@@ -8,20 +8,14 @@
 
 import UIKit
 
-class kBox3DTransition: kAnimationBase, UIViewControllerAnimatedTransitioning {
-
+class kBox3DTransition: kAnimationBase {
+    
     var reverse : Bool = false
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-
-        return duration
-    }
-    
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    override func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         
-        let containerView = transitionContext.containerView()!
-        let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
-        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+        prepareElements(transitionContext)
+        
         let toView = toViewController.view
         let fromView = fromViewController.view
         let direction : CGFloat = reverse ? -1 : 1
@@ -40,12 +34,12 @@ class kBox3DTransition: kAnimationBase, UIViewControllerAnimatedTransitioning {
         containerView.addSubview(toView)
         
         UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
-            containerView.transform = CGAffineTransformMakeTranslation(-direction * containerView.frame.size.width / 2.0, 0)
+            self.containerView.transform = CGAffineTransformMakeTranslation(-direction * self.containerView.frame.size.width / 2.0, 0)
             fromView.layer.transform = viewFromTransform
             toView.layer.transform = CATransform3DIdentity
             }, completion: {
                 finished in
-                containerView.transform = CGAffineTransformIdentity
+                self.containerView.transform = CGAffineTransformIdentity
                 fromView.layer.transform = CATransform3DIdentity
                 toView.layer.transform = CATransform3DIdentity
                 fromView.layer.anchorPoint = CGPointMake(0.5, 0.5)

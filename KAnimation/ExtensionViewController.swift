@@ -8,17 +8,10 @@
 
 import UIKit
 
-class kDropDownDestinationViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
+extension UIViewController {
+    
     @IBAction func dismiss(sender: AnyObject) {
         
         dismissViewControllerAnimated(true, completion: nil)
     }
-  
 }

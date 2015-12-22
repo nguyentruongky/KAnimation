@@ -8,19 +8,13 @@
 
 import UIKit
 
-class kZoomTransition: kAnimationBase, UIViewControllerAnimatedTransitioning{
+class kZoomTransition: kAnimationBase {
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    override func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         
-        return duration
-    }
-    
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        
-        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
-        let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+        prepareElements(transitionContext)
+
         let finalFrameForVC = transitionContext.finalFrameForViewController(toViewController)
-        let containerView = transitionContext.containerView()
         toViewController.view.frame = finalFrameForVC
         toViewController.view.alpha = 0.25
         containerView?.addSubview(toViewController.view)
@@ -34,8 +28,8 @@ class kZoomTransition: kAnimationBase, UIViewControllerAnimatedTransitioning{
         fromViewController.view.removeFromSuperview()
         
         UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
-            snapshotView.frame = CGRectInset(fromViewController.view.frame, fromViewController.view.frame.size.width / 2, fromViewController.view.frame.size.height / 2)
-            toViewController.view.alpha = 1.0
+            snapshotView.frame = CGRectInset(self.fromViewController.view.frame, self.fromViewController.view.frame.size.width / 2, self.fromViewController.view.frame.size.height / 2)
+            self.toViewController.view.alpha = 1.0
             snapshotView.alpha = 0
             }, completion: {
                 finished in
